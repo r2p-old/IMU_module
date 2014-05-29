@@ -11911,6 +11911,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="63.5" y1="236.22" x2="63.5" y2="238.76" width="0.1524" layer="91"/>
 <label x="63.5" y="238.76" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="TIMEPULSE"/>
+<wire x1="342.9" y1="213.36" x2="347.98" y2="213.36" width="0.1524" layer="91"/>
+<label x="347.98" y="213.36" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPS_AUX2" class="0">
 <segment>
@@ -11922,6 +11927,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="U$6" gate="G$1" pin="PB15"/>
 <wire x1="60.96" y1="236.22" x2="60.96" y2="238.76" width="0.1524" layer="91"/>
 <label x="60.96" y="238.76" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="EXTINT0"/>
+<wire x1="342.9" y1="215.9" x2="347.98" y2="215.9" width="0.1524" layer="91"/>
+<label x="347.98" y="215.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
