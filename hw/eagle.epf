@@ -386,13 +386,14 @@ UsedLibrary="/opt/eagle-6.4.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/zetex.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/zilog.lbr"
+UsedLibrary="/home/tino/workspace/openrobots/Eagle/lbr/r2p_modules.lbr"
 
 [Win_1]
 Type="Schematic Editor"
-Loc="0 27 599 426"
-State=2
+Loc="2073 158 2672 557"
+State=1
 Number=2
-File="/home/tino/workspace/r2p/BT_module/hw/BT_module.sch"
+File="/home/tino/workspace/r2p/Proximity_module/hw/Proximity_module.sch"
 View="-8.29656 -5.80736 396.709 269.759"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
@@ -432,22 +433,21 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: -8.29656 -5.80736 396.709 269.759"
 Sheet=1
 
 [Win_2]
 Type="Board Editor"
-Loc="0 27 599 426"
+Loc="1911 148 2510 547"
 State=1
 Number=1
-File="/home/tino/workspace/r2p/BT_module/hw/BT_module.brd"
-View="-3.0577 17.5848 12.7425 41.5518"
-WireWidths=" 0 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1 0.2"
+File="/home/tino/workspace/r2p/Proximity_module/hw/Proximity_module.brd"
+View="5.82238 16.0693 24.7826 45.1995"
+WireWidths=" 0 0.254 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
 ViaDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 ViaDrills=" 0.5 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.6"
-HoleDrills=" 0.5 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 0.6 3.2"
+HoleDrills=" 0.5 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.6"
 TextSizes=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.9304 2.1844 2.54 3.81 5.08 6.4516 1.778"
 PolygonSpacings=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 5.08 6.4516 1.27"
 PolygonIsolates=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
@@ -483,8 +483,8 @@ Layer=16
 
 [Win_3]
 Type="Control Panel"
-Loc="25 139 1708 1011"
-State=1
+Loc="355 322 1526 830"
+State=2
 Number=0
 
 [Desktop]
