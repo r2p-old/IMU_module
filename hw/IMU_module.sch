@@ -11875,9 +11875,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="AM_INT1" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="PA1"/>
-<wire x1="25.4" y1="198.12" x2="22.86" y2="198.12" width="0.1524" layer="91"/>
-<label x="22.86" y="198.12" size="1.778" layer="95" rot="MR0"/>
+<wire x1="25.4" y1="195.58" x2="22.86" y2="195.58" width="0.1524" layer="91"/>
+<label x="22.86" y="195.58" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U$6" gate="G$1" pin="PA2"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="INT1"/>
@@ -11887,9 +11887,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="AM_INT2" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="PA2"/>
-<wire x1="25.4" y1="195.58" x2="22.86" y2="195.58" width="0.1524" layer="91"/>
-<label x="22.86" y="195.58" size="1.778" layer="95" rot="MR0"/>
+<wire x1="25.4" y1="193.04" x2="22.86" y2="193.04" width="0.1524" layer="91"/>
+<label x="22.86" y="193.04" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U$6" gate="G$1" pin="PA3"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="INT2"/>
