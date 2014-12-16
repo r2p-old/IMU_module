@@ -35,45 +35,45 @@ doc: gerbers pdf png
 ### GERBER FILES GENERATION
 
 2layers: $(PROJECT_NAME).GTL $(PROJECT_NAME).GTS $(PROJECT_NAME).GTO $(PROJECT_NAME).GTP $(PROJECT_NAME).GBL $(PROJECT_NAME).GBS $(PROJECT_NAME).GBO $(PROJECT_NAME).GBP  $(PROJECT_NAME).TXT $(PROJECT_NAME).GML 
-	zip $(PROJECT_NAME)-gerbers.zip $(PROJECT_NAME).{GTL,GTS,GTO,GTP,GBL,GBS,GBO,GBP,TXT,dri,gpi}
+	zip $(PROJECT_NAME)-gerbers.zip ./gerbers/*
 	
 # Top layer - copper
 %.GTL : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< Top Pads Vias
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< Top Pads Vias
 # Top layer - solder stop mask
 %.GTS : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< tStop
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< tStop
 # Top layer - silkscreen
 %.GTO : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< Dimension Document
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< Dimension Document
 # Top layer - solder paste
 %.GTP: %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< tCream
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< tCream
 
 # Bottom layer - copper
 %.GBL : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< Bottom Pads Vias
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< Bottom Pads Vias
 # Bottom layer - solder stop mask
 %.GBS : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< bStop
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< bStop
 # Bottom layer - silkscreen
 %.GBO : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< Dimension
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< Dimension
 # Bottom layer - solder paste
 %.GBP: %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< bCream
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< bCream
 
 # Drills and holes
 %.TXT : %.brd
-	$(EAGLE) -X -N -d EXCELLON -E -0.01 -E 0.1 -o $@ $< Drills Holes
+	$(EAGLE) -X -N -d EXCELLON -E -0.01 -E 0.1 -o ./gerbers/$@ $< Drills Holes
 
 # Board outline
 %.GML : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< Dimension
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< Dimension
 
 # Component placement
 %.place : %.brd
-	$(EAGLE) -X -N -d GERBER_RS274X -o $@ $< tPlace tDocu
+	$(EAGLE) -X -N -d GERBER_RS274X -o ./gerbers/$@ $< tPlace tDocu
 
 
 ### DOCUMENTATION GENERATION
@@ -84,17 +84,19 @@ pdf:
 	
 png:  $(PROJECT_NAME).GTL $(PROJECT_NAME).GTS $(PROJECT_NAME).GTO $(PROJECT_NAME).GTP $(PROJECT_NAME).GBL $(PROJECT_NAME).GBS $(PROJECT_NAME).GBO $(PROJECT_NAME).GBP  $(PROJECT_NAME).TXT $(PROJECT_NAME).GML $(PROJECT_NAME).place
 	`gerbv --export=png --output=$(PROJECT_NAME)-layout.png --dpi=$(GERBER_IMAGE_RESOLUTION) \
-	--background=#000000 --foreground=#$(HOLES_COLOUR) $(PROJECT_NAME).TXT \
 	--foreground=#$(SILKSCREEN_COLOUR) $(PROJECT_NAME).GTO \
 	--foreground=#$(SILKSCREEN_COLOUR) $(PROJECT_NAME).place \
 	--foreground=#$(PADS_COLOUR) $(PROJECT_NAME).GTS \
 	--foreground=#$(TOP_SOLDERMASK_COLOUR) $(PROJECT_NAME).GTL \
 	--foreground=#$(BOTTOM_SOLDERMASK_COLOUR) $(PROJECT_NAME).GBL `
 
+#	--background=#000000 --foreground=#$(HOLES_COLOUR) $(PROJECT_NAME).TXT \
+
 ### CLEAN ###
 
 clean:
 	rm -rf $(PROJECT_NAME).{GTL,GTS,GTO,GTP,GBL,GBS,GBO,GBP,TXT,GML,dri,gpi,place}
+#	rm -rf ./gerbers
 	rm -rf $(PROJECT_NAME)-gerbers.zip
 	rm -rf $(PROJECT_NAME)-schematic.pdf
 	rm -rf $(PROJECT_NAME)-layout.png
