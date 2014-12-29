@@ -11778,11 +11778,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="U$7" gate="G$1" pin="SCL/SPC"/>
 </segment>
 <segment>
-<wire x1="172.72" y1="111.76" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
-<label x="160.02" y="111.76" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="SDA/SDI"/>
-</segment>
-<segment>
 <wire x1="167.64" y1="170.18" x2="165.1" y2="170.18" width="0.1524" layer="91"/>
 <label x="165.1" y="170.18" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U$8" gate="G$1" pin="SCL/SPC"/>
@@ -11792,17 +11787,17 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="43.18" y1="177.8" x2="43.18" y2="175.26" width="0.1524" layer="91"/>
 <label x="43.18" y="175.26" size="1.778" layer="95" rot="MR270"/>
 </segment>
+<segment>
+<wire x1="172.72" y1="114.3" x2="167.64" y2="114.3" width="0.1524" layer="91"/>
+<label x="160.02" y="114.3" size="1.778" layer="95"/>
+<pinref part="U$9" gate="G$1" pin="SCL/SPC"/>
+</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
 <wire x1="175.26" y1="236.22" x2="172.72" y2="236.22" width="0.1524" layer="91"/>
 <label x="172.72" y="236.22" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U$7" gate="G$1" pin="SDO"/>
-</segment>
-<segment>
-<wire x1="172.72" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
-<label x="160.02" y="106.68" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="CS"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="SDO"/>
@@ -11814,17 +11809,17 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="45.72" y1="177.8" x2="45.72" y2="175.26" width="0.1524" layer="91"/>
 <label x="45.72" y="175.26" size="1.778" layer="95" rot="MR270"/>
 </segment>
+<segment>
+<wire x1="172.72" y1="109.22" x2="167.64" y2="109.22" width="0.1524" layer="91"/>
+<label x="160.02" y="109.22" size="1.778" layer="95"/>
+<pinref part="U$9" gate="G$1" pin="SDO"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
 <wire x1="175.26" y1="238.76" x2="172.72" y2="238.76" width="0.1524" layer="91"/>
 <label x="172.72" y="238.76" size="1.778" layer="95" rot="MR0"/>
 <pinref part="U$7" gate="G$1" pin="SDA/SDI"/>
-</segment>
-<segment>
-<wire x1="172.72" y1="109.22" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
-<label x="160.02" y="109.22" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="SDO"/>
 </segment>
 <segment>
 <wire x1="167.64" y1="167.64" x2="165.1" y2="167.64" width="0.1524" layer="91"/>
@@ -11835,6 +11830,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="U$6" gate="G$1" pin="PA7"/>
 <wire x1="48.26" y1="177.8" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
 <label x="48.26" y="175.26" size="1.778" layer="95" rot="MR270"/>
+</segment>
+<segment>
+<wire x1="172.72" y1="111.76" x2="167.64" y2="111.76" width="0.1524" layer="91"/>
+<label x="160.02" y="111.76" size="1.778" layer="95"/>
+<pinref part="U$9" gate="G$1" pin="SDA/SDI"/>
 </segment>
 </net>
 <net name="GYRO_CS" class="0">
@@ -11923,14 +11923,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="BAR_CS" class="0">
 <segment>
-<wire x1="172.72" y1="114.3" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
-<label x="160.02" y="114.3" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="SCL/SPC"/>
-</segment>
-<segment>
 <pinref part="U$6" gate="G$1" pin="PB12"/>
 <wire x1="68.58" y1="236.22" x2="68.58" y2="238.76" width="0.1524" layer="91"/>
 <label x="68.58" y="238.76" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<wire x1="172.72" y1="106.68" x2="167.64" y2="106.68" width="0.1524" layer="91"/>
+<label x="160.02" y="106.68" size="1.778" layer="95"/>
+<pinref part="U$9" gate="G$1" pin="CS"/>
 </segment>
 </net>
 <net name="GPS_RX" class="0">
