@@ -14694,7 +14694,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="86.36" y="193.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GYRO_INT2" class="0">
+<net name="GYRO_DRDY" class="0">
 <segment>
 <wire x1="175.26" y1="228.6" x2="172.72" y2="228.6" width="0.1524" layer="91"/>
 <label x="172.72" y="228.6" size="1.778" layer="95" rot="MR0"/>
